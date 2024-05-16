@@ -34,7 +34,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" >About</a></li>
           <li class="dropdown">
-            <a href="services.html" class="active" class="dropbtn">Services</a>
+            <a href="services.html" class="active dropbtn">Services</a>
             <div class="dropdown-content">
               <a href="valuations.html">PROPERTY VALUATIONS</a>
               <a href="propertymanagement.html">PROPERTY MANAGEMENT</a>
@@ -91,6 +91,26 @@
         .dropdown:hover .dropbtn {
           background-color: hsl(0, 1%, 59%);
         }
+
+        @media (max-width: 767px) {
+  .dropdown-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown {
+    position: static;
+  }
+}
 
         </style>
     
@@ -198,7 +218,7 @@
                 &copy; Copyright <strong><span>MoroxProperties</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Designed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a> Distributed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a>
+              Designed and Distributed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a> 
             </div>
         </div>
     </div>

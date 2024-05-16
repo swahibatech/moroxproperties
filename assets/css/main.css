@@ -15,6 +15,8 @@
   scroll-behavior: smooth;
 }
 
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -150,6 +152,7 @@ section {
   color: #fff;
   content: "/";
 }
+
 
 /*--------------------------------------------------------------
 # Scroll top button
@@ -1188,9 +1191,23 @@ section {
 }
  
 #alt-services-2 .img-bg {
-  width: 500px; /* Ensure the div takes the full width of its parent */
-  height: auto; /* Ensure the div takes the full height of its parent */
-  background-position: center; /* Center the background image within the div */
+  width: 500px; /* Set width to 100% to make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  background-position: center;
+  background-size: cover; /* Ensure the image covers the entire container */
+  min-height: 400px;
+}
+
+@media (max-width: 767px) {
+
+  #alt-services-2 .img-bg {
+    width: 400px; /* Set width to 100% to make it responsive */
+    height: auto; /* Maintain aspect ratio */
+    background-position: center;
+    background-size: cover; /* Ensure the image covers the entire container */
+    min-height: 800px;
+  
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1683,123 +1700,11 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 20px 0 30px 0;
-}
+/* Remove padding from all form groups */
 
-.contact .info-item i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
-  line-height: 0;
-  color: var(--color-primary);
-  border-radius: 50%;
-  border: 2px dotted #ffd565;
-}
 
-.contact .info-item h3 {
-  font-size: 20px;
-  color: #6c757d;
-  font-weight: 700;
-  margin: 10px 0;
-}
+/* Keep padding for textarea */
 
-.contact .info-item p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 20px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
-}
 
 @keyframes animate-loading {
   0% {
@@ -1831,6 +1736,21 @@ section {
   }
 }
 
+@media (max-width: 767px) {
+  .google-maps-container {
+    
+    margin-top: -100px; /* Adjust the margin-top value as needed */
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .col-lg-6 {
+    padding-bottom: 0; /* Reset any existing padding */
+    padding-top: 30px; /* Adjust the padding-top value as needed */
+  }
+}
 
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
@@ -2640,6 +2560,44 @@ section {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0; /* Decrease padding for smaller screens */
+    background: url("../img/footer.jpg")  bottom center no-repeat;
+    background-size: cover; /* Adjust to cover the entire container */
+    width: 150%; /* Set the width to 100% of the container */
+  }
+}
+
+@media (max-width: 768px) {
+.footer .footer-legal .copyright {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+}
+}
+
+@media (max-width: 768px) {
+.credits {
+  font-size: 14px; /* Adjust font size as needed */
+  text-align: center; /* Center-align the content */
+  margin-top: 20px; /* Adjust top margin as needed */
+}
+}
+@media (max-width: 768px) {
+.credits a {
+  color: #333; /* Set link color */
+  text-decoration: none; /* Remove underline from links */
+  margin-right: 200px;
+}
+}
+
+@media (max-width: 768px) {
+.credits a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+}
+
 .footer:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
@@ -2812,4 +2770,4 @@ video::-webkit-media-controls-enclosure {
 video::-webkit-media-controls-panel {
   display: none;
 }
-    
+ 

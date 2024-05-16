@@ -51,6 +51,13 @@
       </nav>
       
       <style>
+        @media (max-width: 767px) {
+  .about-img {
+    background-size: cover;
+    background-position: center;
+    height: 380px; /* Adjust height as needed */
+  }
+}
       .dropdown {
         position: relative;
         display: inline-block;
@@ -92,6 +99,25 @@
         background-color: hsl(0, 1%, 59%);
       }
 
+      @media (max-width: 767px) {
+  .dropdown-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown {
+    position: static;
+  }
+}
 
       </style>
     </div>
@@ -109,20 +135,17 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="row position-relative">
-          <div class="col-lg-7 about-img" style="background-image: url(assets/img/morokotso.jpg);"></div>
-          <div class="col-lg-7">
+          <div class="col-lg-7 order-lg-2">
             <h2>About Morox Properties</h2>
+            <div class="col-lg-7 order-lg-1 about-img" style="background-image: url(assets/img/morokotso.jpg);"></div>
             <div class="our-story">
               <h4>Est 2018</h4>
               <h3>The Managing Director</h3>
               <p>Kagiso Tshepang Morokotso is a youthful Motswana entrepreneur, husband and realtor who hails from Mochudi. He is a real estate professional with extensive experience in Property Management, Property Valuations and Estate Agency. He has spent a significant period of his career working for PROMANCO in estate agency and valuations and has worked for Turnstar Holdings LTD as the Group Asset Manager.</p>
-              <p>Currently he is the Managing Director of MOROX Properties, a real estate company which is mandated in estate agency,
-                property valuations and property management. He is also a part time lecturer at
-                Baisago University in the Faculty of Built Environment. For the last year he has been teaching Diploma and Degree classes,
-                as well as Certificate block release classes.</p>
+              <p>Currently he is the Managing Director of MOROX Properties, a real estate company which is mandated in estate agency, property valuations and property management. He is also a part time lecturer at Baisago University in the Faculty of Built Environment. For the last year he has been teaching Diploma and Degree classes, as well as Certificate block release classes.</p>
               <div class="watch-video d-flex align-items-center position-relative">
                 <i class="bi bi-play-circle"></i>
-                <a href="https://youtu.be/73Va8CXwuCc" class="glightbox stretched-link"></a><a>Watch Video</a> 
+                <a href="https://youtu.be/73Va8CXwuCc" class="glightbox stretched-link">Watch Video</a> 
               </div>
             </div>
           </div>
@@ -279,7 +302,7 @@
                 &copy; Copyright <strong><span>MoroxProperties</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Designed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a> Distributed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a>
+              Designed and Distributed by <a href="http://www.swahiba.co.bw/">SWAHIBA</a> 
             </div>
         </div>
     </div>

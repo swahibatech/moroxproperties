@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
     el.addEventListener('click', function(event) {
       event.preventDefault();
-      mobileNavToogle();
+      mobileNavToggle();
     })
   });
 
-  function mobileNavToogle() {
+  function mobileNavToggle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavShow.classList.toggle('d-none');
     mobileNavHide.classList.toggle('d-none');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navbarlink.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        mobileNavToggle();
       }
     });
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Porfolio isotope and filter
+   * Portfolio isotope and filter
    */
   let portfolionIsotope = document.querySelector('.portfolio-isotope');
 
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Initiate pURE cOUNTER
+   * Initiate PureCounter
    */
   new PureCounter();
 
@@ -211,3 +211,28 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+  // Get the services link element
+  const servicesLink = document.querySelector('.services-link');
+
+  // Add an event listener to the services link
+  if (servicesLink) {
+    servicesLink.addEventListener('click', function(event) {
+      // Prevent the default behavior of the link
+      event.preventDefault();
+
+      // Check if the mobile navigation is active
+      if (document.querySelector('.mobile-nav-active')) {
+        // Hide the mobile navigation
+        mobileNavToggle();
+      }
+
+      // Navigate to the services page
+      window.location.href = 'services.html'; // Replace 'services.html' with the URL of your services page
+    });
+
+    // Check if the current page URL matches the services page
+    if (window.location.pathname.includes('services.html')) {
+      servicesLink.classList.add('active'); // Apply the 'active' class to highlight the services link
+    }
+  }
+;
